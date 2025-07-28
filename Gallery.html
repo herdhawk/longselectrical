@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+	
+	<title>Welcome to Long's Electrical Services</title>
+
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="gallery/transitions.css"/>
+
+<style>
+   	body {
+
+		background: url(gallery/bath1.jpeg) no-repeat center fixed;
+		background-size: cover;
+    	}
+
+/* Navigation */
+	nav{
+    		float: right;
+    		margin: 0;
+    		overflow:hidden;
+    		text-align: center;
+	}
+
+	nav ul{
+    		margin: 0;
+    		padding: 0;
+	}
+
+	nav ul li{
+    		display: inline-block;
+    		list-style-type: none;
+	}
+
+	nav > ul > li > a{
+    		color: gold;  /*nav bar text color*/
+    		display: block;
+    		line-height: 4em;
+    		padding: 0.5em 1em;
+    		text-decoration: none;
+		font-family: Metal Mania;
+text-shadow: 2px 2px 5px black;	
+	}
+
+	.logo-img{
+    		float: left;
+    		position: relative;
+    		margin: 1px 1px 1px 1px;
+opacity: 1.0;
+	}
+
+	.bg-div{
+   		background:black; /*nav bar background color*/
+   		overflow: hidden;
+		opacity: .6;
+	}
+
+	/* Change the link color on hover */
+	li a:hover {
+  		background-color: #52595D;
+  		color: gold;
+		transform: scale(1.2);
+	}
+
+	/*active class for the current page*/
+	.active {
+		background-color: #52595D;
+  		color: gold;
+		transform: scale(1.2);
+	}
+		
+	@font-face {
+ 		font-family: 'Metal Mania';
+		font-display: swap;
+ 		src: url(MetalMania-Regular.ttf);
+	}
+
+	.metal-mania-regular {
+  		font-family: "Metal Mania", system-ui;
+  		font-weight: 400;
+  		font-style: normal;
+	}
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 2px solid #444;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 10px;
+      box-shadow: 0 0 20px white;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="transition transition-1 is-active"></div> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="bg-div">
+	<img class= "logo-img" src="gallery/logo.png" width="165" height="70" alt="align box" Align= left>
+	<nav>
+		<ul>
+		<li><a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+  		<li><a href="services.html"><i class="fa fa-fw fa-bolt"></i>Services</a></li>
+		<li><a href="about.html"><i class="fa fa-fw fa-book"></i>About</a></li>
+		<li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+		<li><a class="active" href="#"><i class="fa fa-fw fa-camera"></i>Gallery</a></li>
+		</ul>
+	</nav>
+</div>
+
+  <div class="gallery">
+    <a href="#img1"><img src="gallery/lesgen1.jpg" alt="Image 1" /></a>
+    <a href="#img2"><img src="gallery/lesswitch1.jpg" alt="Image 2" /></a>
+    <a href="#img3"><img src="gallery/lespanel1.jpg" alt="Image 3" /></a>
+    <a href="#img4"><img src="gallery/lesservice1.jpg" alt="Image 4" /></a>
+    <a href="#img5"><img src="gallery/lesservice2.jpg" alt="Image 5" /></a>
+
+    <a href="#img6"><img src="gallery/lessolar1.jpg" alt="Image 6" /></a>
+    <a href="#img7"><img src="gallery/leslighting1.jpg" alt="Image 7" /></a>
+    <a href="#img8"><img src="gallery/lespanel2.png" alt="Image 8" /></a>
+    <a href="#img9"><img src="gallery/lesservice7.jpg" alt="Image 9" /></a>
+    <a href="#img10"><img src="gallery/lesservice10.jpg" alt="Image 10" /></a>
+  </div>
+
+  <!-- Lightbox overlays -->
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lesgen1.jpg" alt="Image 1 Full" />
+  </div>
+
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lesswitch1.jpg" alt="Image 2 Full" />
+  </div>
+
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lespanel1.jpg" alt="Image 3 Full" />
+  </div>
+
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lesservice1.jpg" alt="Image 4 Full" />
+  </div>
+
+  <div id="img5" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lesservice2.jpg" alt="Image 5 Full" />
+  </div>
+
+  <div id="img6" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lessolar1.jpg" alt="Image 6 Full" />
+  </div>
+
+  <div id="img7" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/leslighting1.jpg" alt="Image 7 Full" />
+  </div>
+
+  <div id="img8" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lespanel2.png" alt="Image 8 Full" />
+  </div>
+
+  <div id="img9" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lesservice7.jpg" alt="Image 9 Full" />
+  </div>
+
+  <div id="img10" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="gallery/lesservice10.jpg" alt="Image 10 Full" />
+  </div>
+
+
+<script>
+  window.addEventListener("load", () => {
+    const transition = document.querySelector(".transition");
+    if (transition) {
+      transition.classList.remove("is-active");
+    }
+  });
+</script>
+</body>
+</html>

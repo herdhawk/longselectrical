@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+	
+	<title>Welcome to Long's Electrical Services</title>
+
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="gallery/transitions.css"/>
+		
+<style>
+
+	body {
+		background: url(about/office.jpg) no-repeat center fixed;
+		background-size: cover;
+	}
+
+ 	/* Navigation */
+	nav{
+    		float: right;
+    		margin: 0;
+    		overflow:hidden;
+    		text-align: center;
+	}
+
+	nav ul{
+    		margin: 0;
+    		padding: 0;
+	}
+
+	nav ul li{
+    		display: inline-block;
+    		list-style-type: none;
+	}
+
+	nav > ul > li > a{
+    		color: gold;  /*nav bar text color*/
+    		display: block;
+    		line-height: 4em;
+    		padding: 0.5em 1em;
+    		text-decoration: none;
+		font-family: Metal Mania;
+	}
+
+	.logo-img{
+    		float: left;
+    		position: relative;
+    		margin: 1px 1px 1px 1px;
+	}
+
+	.bg-div{
+   		background:black; /*nav bar background color*/
+   		overflow: hidden;
+		opacity: .6;
+	}
+
+	/* Change the link color on hover */
+	li a:hover {
+  		background-color: #52595D;
+  		color: gold;
+		transform: scale(1.2);
+	}
+
+	/*active class for the current page*/
+	.active {
+		background-color: #52595D;
+  		color: gold;
+		transform: scale(1.2);
+	}
+
+	@font-face {
+ 		font-family: 'Metal Mania';
+		font-display: swap;
+ 		src: url(MetalMania-Regular.ttf);
+	}	
+	
+	.metal-mania-regular {
+  		font-family: "Metal Mania", system-ui;
+  		font-weight: 400;
+  		font-style: normal;
+	}
+
+	
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+font-family: Metal Mania;
+color: gold;
+text-shadow: 2px 2px 5px black;
+}
+
+.services-list {
+  flex: 1 1 50%;
+}
+
+.services-list h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+color: gold;
+font-family: Metal Mania;
+text-shadow: 4px 4px 10px black;
+}
+
+.services-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  margin-bottom: 30px;
+}
+
+.services-list h2 {
+  font-size: 1.5em;
+  margin: 0;
+color: gold;
+font-family: Metal Mania;
+text-shadow: 4px 4px 10px black;
+}
+
+.services-list p {
+text-indent: 10px;
+  margin: 5px 0 0 0;
+color: gold;
+font-family: Times New Roman;
+text-shadow: 4px 4px 10px black;
+}
+
+
+
+.services-images {
+  flex: 1 1 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-images img {
+  position: absolute;
+  max-width: 375px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.services-images .img1 {
+  top: 0;
+  left: 10%;
+  z-index: 3;
+}
+
+.services-images .img2 {
+  top:300px;
+  left: 25%;
+  z-index: 2;
+}
+
+.services-images .img3 {
+  top: 500px;
+  left: 10%;
+  z-index: 1;
+}
+
+.services-images .img4 {
+  top: 340px;
+  left: 25%;
+  z-index: 1;
+}
+
+.services-images img:hover {
+  transform: scale(1.05);
+  z-index: 4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .services-images {
+    margin-top: 30px;
+    height: 300px;
+  }
+
+  .services-images img {
+    position: absolute;
+    max-width: 200px;
+  }
+}
+
+.text-overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+</style>
+	
+</head>
+
+
+<body>
+
+<div class="transition transition-1 is-active"></div> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="bg-div">
+	<img class= "logo-img" src="about/logo.png" width="165" height="70" alt="align box" Align= left>
+	<nav>
+		<ul>
+		<li><a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+  		<li><a href="services.html"><i class="fa fa-fw fa-bolt"></i>Services</a></li>
+		<li><a class="active" href="#"><i class="fa fa-fw fa-book"></i>About</a></li>
+		<li><a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+		<li><a href="gallery.html"><i class="fa fa-fw fa-camera"></i>Gallery</a></li>
+		</ul>
+	</nav>
+</div>
+
+ <div class="container">
+    <section class="services-list">
+	<div class="text-overlay">
+      <h1>About Us...</h1>
+      <ul>
+        <li>
+          <h2>Who we are...</h2>
+          <p>Based in the heart of the WV–KY–OH tri-state region, Long Electric & Solar brings trusted, professional electrical services to rural homeowners, local businesses, and regional industries. From everyday residential wiring to commercial installations, solar solutions, generators, and industrial-grade projects, we deliver peace of mind—and power—every time.</p>
+        </li>
+        <li>
+          <h2>Meet Chris Long...</h2>
+          <p>Owner and Master Electrician, Chris Long grew up in Kenova, West Virginia, and has more than 25 years of experience in the field. A graduate of the Florida Electrical Apprenticeship & Training (FEAT) program, Chris is a licensed electrical inspector and master electrician. He’s handled everything from curb-appeal landscape lighting to large-scale projects like the Publix distribution center in Orlando, plus resort installations at Westgate and Universal Studios.</p>
+        </li>
+        <li>
+          <h2>Our Mission...</h2>
+          <p>We’re all about providing reliable, safe, and expert electrical work—grounded in integrity and guided by community values. Whether wiring a farmhouse or hooking up a commercial facility, we bring sustained professionalism to every job, no matter the scope or location.</p>
+        </li>
+	<li>
+	  <h2>Why Choose Us?</h2>
+	  <p>Master-level expertise: With licensing and FEAT apprenticeship certification, Chris and his team bring top-tier skill and up-to-date code knowledge. 
+
+Versatile capability: From residential lighting to industrial systems and solar power, we cover it all.
+
+Local commitment: We know rural concerns—from power reliability to generator backup—and prioritize frank communication and dependable service.
+
+Proven project success: Rural homeowners trust us with their homes, and local businesses appreciate our fast, professional work backed by real-world experience.
+
+We’re proud to light up small towns and rural communities across West Virginia, eastern Kentucky, and southern Ohio. We believe in supporting our neighbors—and delivering service rooted in mutual respect and integrity.</p>
+	</li>
+      </ul>
+</div>
+    </section>
+
+    <section class="services-images">
+      <img src="about/chris1.jpg" alt="new construction" class="img1" />
+      <img src="about/chris2.jpg" alt="new construction" class="img2" />
+      <img src="about/chris3.jpg" alt="new construction" class="img3" />
+    </section>
+  </div>
+
+<script src="about/main.js"></script>
+
+</body>
+
+</html> 

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+
+	
+	<title>Welcome to Long's Electrical Services</title>
+
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="gallery/transitions.css"/>
+
+<style>
+
+	body {
+		background: url(contact/stairs.jpeg) no-repeat center fixed;
+		background-size: cover;
+	}
+
+	.large {
+    		font-size: 58px;
+  	}
+
+  	.medium {
+    		font-size: 42px;
+  	}
+
+  	.small {
+    		font-size: 20px;
+  	}
+
+	img {
+  		width: 100%;
+		height: 100%;
+	}
+
+	h1 {
+		background: transparent;
+		color: gold;
+		text-align: left;
+		font-family: Metal Mania;
+		text-shadow: 6px 6px 10px black;
+	}
+
+	h2 {
+		background: transparent;
+		color: gold;
+		text-align: left;
+		font-family: Metal Mania;
+		text-shadow: 3px 3px 6px black;
+	}
+
+ 	/* Navigation */
+	nav{
+    		float: right;
+    		margin: 0;
+    		overflow:hidden;
+    		text-align: center;
+	}
+
+	nav ul{
+    		margin: 0;
+    		padding: 0;
+	}
+
+	nav ul li{
+    		display: inline-block;
+    		list-style-type: none;
+	}
+
+	nav > ul > li > a{
+    		color: gold;  /*nav bar text color*/
+    		display: block;
+    		line-height: 4em;
+    		padding: 0.5em 1em;
+    		text-decoration: none;
+		font-family: Metal Mania;
+		text-shadow: 2px 2px 5px black;	
+	}
+
+	.logo-img{
+    		float: left;
+    		position: relative;
+    		margin: 1px 1px 1px 1px;
+		opacity: 1.0;
+	}
+
+	.bg-div{
+   		background:black; /*nav bar background color*/
+   		overflow: hidden;
+		opacity: .6;
+	}
+
+	/* Change the link color on hover */
+	li a:hover {
+  		background-color: #52595D;
+  		color: gold;
+		transform: scale(1.2);
+	}
+
+	/*active class for the current page*/
+	.active {
+		background-color: #52595D;
+  		color: gold;
+		transform: scale(1.2);
+	}
+
+	@font-face {
+ 		font-family: 'Metal Mania';
+		font-display: swap;
+ 		src: url(MetalMania-Regular.ttf);
+	}	
+	
+	.metal-mania-regular {
+  		font-family: "Metal Mania", system-ui;
+  		font-weight: 400;
+  		font-style: normal;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.submit-button {
+    		background-color: gold;
+    		color: black;
+    		font-family: 'Metal Mania', cursive;
+    		font-size: 18px;
+		text-shadow: 3px 3px 6px rgb(255, 255, 255);
+		text-align: center;
+    		padding: 8px 40px 16px 30px;
+    		border: none;
+    		cursor: pointer;
+    		clip-path: polygon(10% 0%, 90% 0%, 70% 40%, 100% 50%, 20% 100%, 30% 60%, 0% 50%);
+    		transition: background-color 0.3s ease;
+		filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.6));
+  	}
+
+  	.submit-button:hover {
+    		background-color: #ffd700;
+	}
+
+	
+
+
+</style>
+	
+</head>
+
+
+<body>
+
+<div class="transition transition-1 is-active"></div> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="bg-div">
+	<img class= "logo-img" src="contact/logo.png" style= "width:145px;height:80px;" alt="align box" Align= left>
+	<nav>
+		<ul>
+		<li><a href="home.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+  		<li><a href="services.html"><i class="fa fa-fw fa-bolt"></i>Services</a></li>
+		<li><a href="about.html"><i class="fa fa-fw fa-book"></i>About</a></li>
+		<li><a class="active" href="#"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+		<li><a href="gallery.html"><i class="fa fa-fw fa-camera"></i>Gallery</a></li>
+		</ul>
+	</nav>
+</div>
+
+
+<h1>
+	<br>
+	<br>
+	<span class="medium" style= "font-family:Metal Mania">Let us know how we can help!</span><br>
+	<span class="small" style= "font-family:Metal Mania">Fill out the form below and we'll get back to you as soon as possible.</span><br>
+</h1>
+
+<form id="contactForm">
+
+    <h1><label for="subject"><span class="small" style= "font-family:Metal Mania">Subject:</span></label>
+    <select id="subject" name="subject" required>
+      <option value="">-- Select a Subject --</option>
+      <option value="inspection">Inspection Request</option>
+      <option value="newcon">New Construction</option>
+      <option value="gen">Generators</option>
+      <option value="inquiry">Other Inquiry</option>
+    </select>
+<br>
+    <label for="name"><span class="small" style= "font-family:Metal Mania">Your Name:</span></label>
+    <input type="text" id="name" name="name" required />
+<br>
+    <label for="address"><span class="small" style= "font-family:Metal Mania">Address:</span></label>
+    <input type="text" id="address" name="address" required />
+<br>
+    <label for="phone"><span class="small" style= "font-family:Metal Mania">Phone Number:</span></label>
+    <input type="text" id="phone" name="phone" required />
+<br>
+    <label for="email"><span class="small" style= "font-family:Metal Mania">Your Email:</span></label>
+    <input type="email" id="email" name="email" required />
+<br></h1>
+    <div id="inspectSection" class="form-section hidden">
+      <h1><label for="issue"><span class="small" style= "font-family:Metal Mania">Describe your issue:</span></label>
+      <textarea id="issue" name="issue" rows="4"></textarea></h1><br>
+      <h1><label for="aep"><span class="small" style= "font-family:Metal Mania">AEP Work Order #:</span></label>
+      <textarea id="aep" name="aep" rows="1"></textarea></h1>
+    </div>
+
+    <div id="newconSection" class="form-section hidden">
+      <h1><label for="prints"><span class="small" style= "font-family:Metal Mania">Do you have blueprints?</span></label>
+      <select id="prints" name="prints" required>
+      	<option value="">--   --</option>
+      	<option value="yes">Yes</option>
+      	<option value="no">No</option>
+    	</select></h1><br>
+      <h1><label for="elec"><span class="small" style= "font-family:Metal Mania">Is it all electric? Any gas? Please be detailed on the types of services required.</span></label>
+      <textarea id="elec" name="elec" rows="4"></textarea></h1>
+    </div>
+
+    <div id="genSection" class="form-section hidden">
+      <h1><label for="service"><span class="small" style= "font-family:Metal Mania">Service Size:</span></label>
+      <textarea id="service" name="service" rows="1"></textarea>
+      <label for="gas"><span class="small" style= "font-family:Metal Mania">Gas or Propane On Site:</span></label>
+	<select id="gas" name="service" required>
+      	<option value="">--   --</option>
+      	<option value="yes">Yes</option>
+      	<option value="no">No</option>
+    	</select></h1>
+    </div>
+
+    <div id="inquirySection" class="form-section hidden">
+      <h1><label for="inquiry"><span class="small" style= "font-family:Metal Mania">If you have another electrical service need, please describe it here in as great of detail as possible:</span></label>
+      <textarea id="inquiry" name="inquiry" rows="4"></textarea></h1>
+    </div>
+
+    <br><button type="submit" class="submit-button">Submit</button>
+
+
+  <script>
+    const subjectDropdown = document.getElementById("subject");
+    const inspectSection = document.getElementById("inspectSection");
+    const newconSection = document.getElementById("newconSection");
+    const genSection = document.getElementById("genSection");
+    const inquirySection = document.getElementById("inquirySection");
+
+    subjectDropdown.addEventListener("change", function () {
+      inspectSection.classList.add("hidden");
+      newconSection.classList.add("hidden");
+      genSection.classList.add("hidden");
+      inquirySection.classList.add("hidden");
+
+      if (this.value === "inspection") {
+        inspectSection.classList.remove("hidden");
+      } else if (this.value === "newcon") {
+        newconSection.classList.remove("hidden");
+      } else if (this.value === "gen") {
+        genSection.classList.remove("hidden");
+      } else if (this.value === "inquiry") {
+	inquirySection.classList.remove("hidden");
+      }
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = {
+        name: document.getElementById("name").value,
+	address: document.getElementById("address").value,
+        phone: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        subject: subjectDropdown.value,
+        issue: document.getElementById("issue")?.value || "",
+        aep: document.getElementById("aep")?.value || "",
+        prints: document.getElementById("prints")?.value || "",
+	service: document.getElementById("service")?.value || "",
+	inquiry: document.getElementById("inquiry")?.value || "",
+	elec: document.getElementById("elec")?.value || ""
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbyFlm_lFqBLJlEziVSobKlcTxbXZI66M7UAiD28ofB96HkdvKkNcMgUnJl7LaU8264/exec", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" }
+      })
+        .then(response => response.text())
+        .then(data => {
+          alert("Form submitted successfully!");
+          document.getElementById("contactForm").reset();
+          inspectSection.classList.add("hidden");
+          newconSection.classList.add("hidden");
+          genSection.classList.add("hidden");
+	  inquirySection.classList.add("hidden");
+        })
+        .catch(error => {
+          console.error("Error:", error);
+          alert("There was an error submitting the form.");
+        });
+    });
+
+  </script>
+
+
+<script src="contact/main.js"></script>
+
+</body>
+
+</html> 
