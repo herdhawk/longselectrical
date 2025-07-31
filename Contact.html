@@ -252,23 +252,32 @@
     const inquirySection = document.getElementById("inquirySection");
 
     subjectDropdown.addEventListener("change", function () {
-  // Hide all sections and remove 'required' attributes
-  [inspectSection, newconSection, genSection, inquirySection].forEach(section => {
+  const allSections = [inspectSection, newconSection, genSection, inquirySection];
+
+  // Hide all and remove required from any inputs/selects inside them
+  allSections.forEach(section => {
     section.classList.add("hidden");
-    section.querySelectorAll("[required]").forEach(field => field.removeAttribute("required"));
+    section.querySelectorAll("input, select, textarea").forEach(el => {
+      el.removeAttribute("required");
+    });
   });
 
-  // Show the relevant section and add 'required' back
+  // Show relevant section and set 'required' only for visible fields
   if (this.value === "inspection") {
     inspectSection.classList.remove("hidden");
+    document.getElementById("issue").setAttribute("required", "true");
+    document.getElementById("aep").setAttribute("required", "true");
   } else if (this.value === "newcon") {
     newconSection.classList.remove("hidden");
     document.getElementById("prints").setAttribute("required", "true");
+    document.getElementById("elec").setAttribute("required", "true");
   } else if (this.value === "gen") {
     genSection.classList.remove("hidden");
+    document.getElementById("service").setAttribute("required", "true");
     document.getElementById("gas").setAttribute("required", "true");
   } else if (this.value === "inquiry") {
     inquirySection.classList.remove("hidden");
+    document.getElementById("inquiry").setAttribute("required", "true");
   }
 });
 
