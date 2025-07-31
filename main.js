@@ -19,9 +19,9 @@ window.onload = () => {
 
       console.log(transition_el);
 
-      setInterval(() => {
-        window.location.href = target;
-      }, 500);
+      setTimeout(() => {
+  window.location.href = target;
+}, 500);
     })
   }
 }
