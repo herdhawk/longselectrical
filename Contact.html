@@ -252,21 +252,26 @@
     const inquirySection = document.getElementById("inquirySection");
 
     subjectDropdown.addEventListener("change", function () {
-      inspectSection.classList.add("hidden");
-      newconSection.classList.add("hidden");
-      genSection.classList.add("hidden");
-      inquirySection.classList.add("hidden");
+  // Hide all sections and remove 'required' attributes
+  [inspectSection, newconSection, genSection, inquirySection].forEach(section => {
+    section.classList.add("hidden");
+    section.querySelectorAll("[required]").forEach(field => field.removeAttribute("required"));
+  });
 
-      if (this.value === "inspection") {
-        inspectSection.classList.remove("hidden");
-      } else if (this.value === "newcon") {
-        newconSection.classList.remove("hidden");
-      } else if (this.value === "gen") {
-        genSection.classList.remove("hidden");
-      } else if (this.value === "inquiry") {
-	inquirySection.classList.remove("hidden");
-      }
-    });
+  // Show the relevant section and add 'required' back
+  if (this.value === "inspection") {
+    inspectSection.classList.remove("hidden");
+  } else if (this.value === "newcon") {
+    newconSection.classList.remove("hidden");
+    document.getElementById("prints").setAttribute("required", "true");
+  } else if (this.value === "gen") {
+    genSection.classList.remove("hidden");
+    document.getElementById("gas").setAttribute("required", "true");
+  } else if (this.value === "inquiry") {
+    inquirySection.classList.remove("hidden");
+  }
+});
+
 
     document.getElementById("contactForm").addEventListener("submit", function (e) {
       e.preventDefault();
