@@ -23,7 +23,20 @@
 	
 <style>
 		
-	
+	html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Container needs relative positioning */
+}
+
+.footer-text {
+    position: absolute; /* Text element uses absolute positioning */
+    bottom: 0; /* Aligns to the bottom of the relative container */
+    width: 100%; /* Ensures it spans the full width */
+    text-align: center; /* Optional: Center the text horizontally */
+    padding: 10px; /* Optional: Add some spacing */
+}
 	body {
 		background: url(kitchen1.jpg) no-repeat center fixed;
 		background-size: cover;
@@ -171,16 +184,16 @@
 
 <h1>
 	<br>
-	<br>
 	<span class="small" style= "font-family:Metal Mania">Welcome to </span><br>
 	<span class="large" style= "font-family:Metal Mania">Long's Electrical Services </span><br>
 </h1>
 
-<h2>
-	Licensed and insured.
-</h2>	
+	
 
-<div style="margin-top: 20px; text-align: center,bottom;">
+<div class="footer-text">
+	<h2>
+	Licensed and insured.
+    </h2>
 	<a href="https://www.facebook.com/people/Longs-Electrical-Services/61557967652790/?_rdr" target="_blank">
 		<img src="fb.png" alt="Facebook" class="icon"></a>
 	<a href="https://g.co/kgs/vwNcMFh" target="_blank">
@@ -213,6 +226,7 @@
 
 
 -->
+
 
 
 
