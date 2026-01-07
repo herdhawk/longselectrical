@@ -31,6 +31,7 @@
 body {
     display: flex;
     flex-direction: column;
+	min-height: 100vh; /* ensures body takes full viewport height */
 }
 
 .main-content {
@@ -155,15 +156,30 @@ body {
 		transform: scale(1.2);
 	}
 
+	/* Optional: ensure footer and footer-text don’t shrink */
+.footer-text,
+.ft-div {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
 	.ft-div{
-   		background:black; /*footer bar background color*/
-   		overflow: hidden;
-		opacity: .6;
+   		
+		background: black;
+    color: gold;
+    opacity: 0.6;
+    padding: 20px;
+    font-family: "Metal Mania";
+    text-shadow: 2px 2px 5px black;
 	}
 
 	.footer-text {
-    text-align: center;
-    padding-bottom: 40px;
+    background: black;
+    color: gold;
+    opacity: 0.6;
+    font-family: "Metal Mania";
+    text-shadow: 2px 2px 5px black;
 }
 
 	
@@ -233,7 +249,7 @@ body {
 	<br>
   
 </h1>
-
+</div>
 	<br>
 	<br>
 
@@ -246,7 +262,7 @@ body {
 	<a href="https://g.co/kgs/vwNcMFh" target="_blank">
 		<img src="g.png" alt="Google" class="icon"></a>
 </div>
-</div>
+
 
 	
 <div class="ft-div">
@@ -283,6 +299,7 @@ body {
 
 
 -->
+
 
 
 
