@@ -20,7 +20,20 @@
 	<link rel="stylesheet" href="gallery/transitions.css"/>
 		
 <style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+	min-height: 100vh; /* ensures body takes full viewport height */
+}
+
+.main-content {
+    flex: 1;
+}
 	body {
 		background: url(about/office.jpg) no-repeat center fixed;
 		background-size: cover;
@@ -212,13 +225,53 @@ text-shadow: 4px 4px 10px black;
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
 
+	/* Optional: ensure footer and footer-text don’t shrink */
+.footer-text,
+.ft-div {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+	.ft-div{
+   		
+		background: black;
+    color: gold;
+    opacity: 0.6;
+    padding: 20px;
+    font-family: "Metal Mania";
+    text-shadow: 2px 2px 5px black;
+	}
+
+	.footer-text {
+    background: transparent;
+		color: gold;
+		text-align: center;
+		font-family: Metal Mania;
+		text-shadow: 5px 5px 8px black;
+}
+
+	
+	/* ===== FOOTER ===== */
+    footer {
+      background-color: black;
+      overflow: hidden;
+		opacity: .6;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+		font-family: Metal Mania;
+		text-shadow: 2px 2px 5px black;	
+		color: gold;
+    }
+	
 </style>
 	
 </head>
 
 
 <body>
-
+<div class="main-content">
 <div class="transition transition-1 is-active"></div> 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -275,9 +328,17 @@ We’re proud to light up small towns and rural communities across West Virginia
       <img src="about/chris3.jpg" alt="new construction" class="img3" />
     </section>
   </div>
-
+</div>
+	
+<div class="ft-div">
+<footer>
+  &copy; 2026 Long's Electrical Services. All rights reserved.
+</footer>
+</div>
+	
 <script src="about/main.js"></script>
 
 </body>
 
 </html> 
+
