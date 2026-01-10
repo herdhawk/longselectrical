@@ -20,7 +20,20 @@
 	<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
 	
 <style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
+body {
+    display: flex;
+    flex-direction: column;
+	min-height: 100vh; /* ensures body takes full viewport height */
+}
+
+.main-content {
+    flex: 1;
+}
 	body {
 		background: url(services/living1.jpg) no-repeat center fixed;
 		background-size: cover;
@@ -216,6 +229,46 @@ text-shadow: 4px 4px 10px black;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.6);
 }
+
+	/* Optional: ensure footer and footer-text don’t shrink */
+.footer-text,
+.ft-div {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+	.ft-div{
+   		
+		background: black;
+    color: gold;
+    opacity: 0.6;
+    padding: 20px;
+    font-family: "Metal Mania";
+    text-shadow: 2px 2px 5px black;
+	}
+
+	.footer-text {
+    background: black;
+    color: gold;
+    opacity: 0.6;
+    font-family: "Metal Mania";
+    text-shadow: 2px 2px 5px black;
+}
+
+	
+	/* ===== FOOTER ===== */
+    footer {
+      background-color: black;
+      overflow: hidden;
+		opacity: .6;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+		font-family: Metal Mania;
+		text-shadow: 2px 2px 5px black;	
+		color: gold;
+    }
 	
 </style>
 	
@@ -276,6 +329,14 @@ text-shadow: 4px 4px 10px black;
     </section>
   </div>
 
+	
+<div class="ft-div">
+<footer>
+  &copy; 2026 Long's Electrical Services. All rights reserved.
+</footer>
+</div>
+
+	
 <script src="services/main.js"></script>
 
 
@@ -284,3 +345,4 @@ text-shadow: 4px 4px 10px black;
 </body>
 
 </html> 
+
