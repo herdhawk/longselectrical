@@ -151,12 +151,10 @@ footer {
 <h1 style="text-align: center; margin-top: 100px;">Let us know how we can help!</h1>
 <h2 style="text-align: center;">Fill out the form below and we'll get back to you as soon as possible.</h2>
 
-<form action="https://formsubmit.co/clong.nps@gmail.com" method="POST">
+<form id="contactForm">
   
   <!-- Honeypot for spam bots -->
   <input type="text" name="_honey" style="display:none">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://www.longselectricalservice.com/thankyou.html">
 
   <label for="subject">Subject:</label>
   <select name="subject" id="subject" required>
@@ -224,22 +222,99 @@ footer {
 </form>
 
 <script>
-  const subjectDropdown = document.getElementById("subject");
-  const sections = {
+const subjectDropdown = document.getElementById("subject");
+
+const sections = {
     inspection: document.getElementById("inspectSection"),
     newcon: document.getElementById("newconSection"),
     gen: document.getElementById("genSection"),
     inquiry: document.getElementById("inquirySection")
-  };
+};
 
-  subjectDropdown.addEventListener("change", function () {
-    for (const key in sections) {
-      sections[key].classList.add("hidden");
-    }
+// Show/hide form sections
+subjectDropdown.addEventListener("change", function () {
+
+    Object.values(sections).forEach(section => {
+        section.classList.add("hidden");
+    });
+
     if (sections[this.value]) {
-      sections[this.value].classList.remove("hidden");
+        sections[this.value].classList.remove("hidden");
     }
-  });
+
+});
+
+
+// Submit form
+document.getElementById("contactForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const formData = {
+
+        subject: document.getElementById("subject").value,
+
+        name: document.getElementById("name").value,
+
+        address: document.getElementById("address").value,
+
+        phone: document.getElementById("phone").value,
+
+        email: document.getElementById("email").value,
+
+        issue: document.getElementById("issue").value,
+
+        aep: document.getElementById("aep").value,
+
+        prints: document.getElementById("prints").value,
+
+        elec: document.getElementById("elec").value,
+
+        service: document.getElementById("service").value,
+
+        gas: document.getElementById("gas").value,
+
+        inquiry: document.getElementById("inquiry").value
+
+    };
+
+
+
+fetch("https://script.google.com/macros/s/AKfycbxGPSBkdbg3Q6aVO4C_6gC8LzTtRBZ1dLhVNZDK4IhEzaBe6P7ZBkzbqaxVE0lrjAOR/exec",{
+
+    method:"POST",
+
+    headers:{
+        "Content-Type":"application/json"
+    },
+
+    body:JSON.stringify(formData)
+
+})
+
+.then(response=>response.text())
+
+.then(result=>{
+
+    alert("Thank you! Your request has been submitted.");
+
+    document.getElementById("contactForm").reset();
+
+    Object.values(sections).forEach(section=>{
+        section.classList.add("hidden");
+    });
+
+})
+
+.catch(error=>{
+
+    alert("There was an error sending your request.");
+
+    console.log(error);
+
+});
+
+});
 </script>
 <br>
 	<br>
