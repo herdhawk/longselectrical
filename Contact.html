@@ -1,342 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Long's Electrical Services</title>
-  <link rel="stylesheet" href="gallery/transitions.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Long's Electrical Services</title>
 
-  <style>
-    body {
-      background: url(contact/stairs.jpeg) no-repeat center fixed;
-      background-size: cover;
-      font-family: 'Metal Mania', cursive;
-    }
+<link href="gallery/transitions.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"/>
 
-    .small {
-      font-size: 20px;
-    }
+<style>
+body {
+  background: url(contact/stairs.jpeg) no-repeat center fixed;
+  background-size: cover;
+  font-family: 'Metal Mania', cursive;
+}
 
-    h1, h2, label {
-      color: gold;
-      text-shadow: 2px 2px 5px black;
-		font-family: 'Metal Mania', cursive;
-    }
+.small {
+  font-size:20px;
+}
 
-    .bg-div {
-      background: black;
-      opacity: 0.6;
-      overflow: hidden;
-    }
+h1, h2, label {
+  color:gold;
+  text-shadow:2px 2px 5px black;
+  font-family:'Metal Mania', cursive;
+}
 
-    .logo-img {
-      float: left;
-      margin: 1px;
-    }
+.bg-div {
+  background:black;
+  opacity:0.6;
+  overflow:hidden;
+}
 
-    nav {
-      float: right;
-    }
+.logo-img {
+  float:left;
+  margin:1px;
+}
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+nav {
+  float:right;
+}
 
-    nav li {
-      display: inline-block;
-    }
+nav ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
 
-    nav a {
-      color: gold;
-      font-family: 'Metal Mania', cursive;
-      text-decoration: none;
-      padding: 0.5em 1em;
-      display: inline-block;
-    }
+nav li {
+  display:inline-block;
+}
 
-    nav a:hover,
-    .active {
-      background-color: #52595D;
-      transform: scale(1.1);
-    }
+nav a {
+  color:gold;
+  font-family:'Metal Mania', cursive;
+  text-decoration:none;
+  padding:.5em 1em;
+  display:inline-block;
+}
 
-    form {
-      background-color: rgba(0, 0, 0, 0.6);
-      color: gold;
-      padding: 2rem;
-      max-width: 600px;
-      margin: auto;
-      border-radius: 10px;
-		font-family: 'Metal Mania', cursive;
-    }
+nav a:hover,
+.active {
+  background-color:#52595D;
+  transform:scale(1.1);
+}
 
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 8px 0 16px;
-      font-family: inherit;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+form {
+  background-color:rgba(0,0,0,.6);
+  color:gold;
+  padding:2rem;
+  max-width:600px;
+  margin:auto;
+  border-radius:10px;
+  font-family:'Metal Mania', cursive;
+}
 
-    .submit-button {
-      background-color: gold;
-      color: black;
-      font-family: 'Metal Mania', cursive;
-      font-size: 18px;
-      padding: 10px 30px;
-      border: none;
-      cursor: pointer;
-      clip-path: polygon(10% 0%, 90% 0%, 70% 40%, 100% 50%, 20% 100%, 30% 60%, 0% 50%);
-      filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.6));
-    }
+input, select, textarea {
+  width:100%;
+  padding:10px;
+  margin:8px 0 16px;
+  font-family:inherit;
+  font-size:16px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
 
-    .form-section.hidden {
-      display: none;
-    }
+.submit-button {
+  background-color:gold;
+  color:black;
+  font-family:'Metal Mania', cursive;
+  font-size:18px;
+  padding:10px 30px;
+  border:none;
+  cursor:pointer;
+  clip-path:polygon(10% 0%,90% 0%,70% 40%,100% 50%,20% 100%,30% 60%,0% 50%);
+  filter:drop-shadow(2px 2px 6px rgba(0,0,0,.6));
+}
 
-    /* === Footer === */
+.form-section.hidden {
+  display:none;
+}
+
 .footer-text,
 .ft-div {
-  flex-shrink: 0;
-  text-align: center;
-  padding: 10px 0;
-	font-family: Metal Mania;
+  flex-shrink:0;
+  text-align:center;
+  padding:10px 0;
+  font-family:Metal Mania;
 }
 
 .footer-text {
-  background: transparent;
-  font-family: Metal Mania;
-  text-shadow: 5px 5px 8px black;
+  background:transparent;
+  text-shadow:5px 5px 8px black;
 }
 
-.ft-div{
-  background: black;
-  color: gold;
-  opacity: 0.6;
-  padding: 20px;
-  font-family: Metal Mania;
-  text-shadow: 2px 2px 5px black;
+.ft-div {
+  background:black;
+  color:gold;
+  opacity:.6;
+  padding:20px;
+  text-shadow:2px 2px 5px black;
 }
 
 footer {
-  text-align: center;
-  font-size: 14px;
-	font-family: Metal Mania;
+  text-align:center;
+  font-size:14px;
+  font-family:Metal Mania;
 }
-
-    
-  </style>
+</style>
 </head>
 
 <body>
 
 <div class="bg-div">
-  <img class="logo-img" src="contact/logo.png" style="width:145px;height:80px;" alt="Logo">
-  <nav>
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/Services.html">Services</a></li>
-      <li><a href="/About.html">About</a></li>
-      <li><a class="active" href="#">Contact</a></li>
-      <li><a href="/Gallery.html">Gallery</a></li>
-    </ul>
-  </nav>
+
+<img alt="Logo" class="logo-img" src="contact/logo.png" style="width:145px;height:80px;"/>
+
+<nav>
+<ul>
+<li><a href="/index.html">Home</a></li>
+<li><a href="/Services.html">Services</a></li>
+<li><a href="/About.html">About</a></li>
+<li><a class="active" href="#">Contact</a></li>
+<li><a href="/Gallery.html">Gallery</a></li>
+</ul>
+</nav>
+
 </div>
 
-<h1 style="text-align: center; margin-top: 100px;">Let us know how we can help!</h1>
-<h2 style="text-align: center;">Fill out the form below and we'll get back to you as soon as possible.</h2>
 
-<form id="contactForm">
-  
-  <!-- Honeypot for spam bots -->
-  <input type="text" name="_honey" style="display:none">
+<h1 style="text-align:center;margin-top:100px;">
+Let us know how we can help!
+</h1>
 
-  <label for="subject">Subject:</label>
-  <select name="subject" id="subject" required>
-    <option value="">-- Select a Subject --</option>
-    <option value="inspection">Inspection Request</option>
-    <option value="newcon">New Construction</option>
-    <option value="gen">Generators</option>
-    <option value="inquiry">Other Inquiry</option>
-  </select>
+<h2 style="text-align:center;">
+Fill out the form below and we'll get back to you as soon as possible.
+</h2>
 
-  <label for="name">Your Name:</label>
-  <input type="text" name="name" id="name" required>
 
-  <label for="address">Address:</label>
-  <input type="text" name="address" id="address">
+<!-- Google Forms hidden submission target -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
 
-  <label for="phone">Phone Number:</label>
-  <input type="text" name="phone" id="phone">
 
-  <label for="email">Your Email:</label>
-  <input type="email" name="email" id="email" required>
+<form 
+action="https://docs.google.com/forms/d/e/1FAIpQLSelnbQcXuovwEbQDtEDa7cdJg4yEuoygDtXDkhpi1sHrWW0ZQ/formResponse"
+id="contactForm"
+method="POST"
+target="hidden_iframe">
 
-  <!-- Section: Inspection -->
-  <div id="inspectSection" class="form-section hidden">
-    <label for="issue">Describe your issue:</label>
-    <textarea name="issue" id="issue" rows="4"></textarea>
 
-    <label for="aep">AEP Work Order #:</label>
-    <input type="text" name="aep" id="aep">
-  </div>
+<!-- Honeypot -->
+<input name="_honey" style="display:none" type="text"/>
 
-  <!-- Section: New Construction -->
-  <div id="newconSection" class="form-section hidden">
-    <label for="prints">Do you have blueprints?</label>
-    <select name="prints" id="prints">
-      <option value="">--</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
 
-    <label for="elec">Is it all electric? Any gas? Please describe:</label>
-    <textarea name="elec" id="elec" rows="4"></textarea>
-  </div>
+<label for="subject">Subject:</label>
 
-  <!-- Section: Generators -->
-  <div id="genSection" class="form-section hidden">
-    <label for="service">Service Size:</label>
-    <input type="text" name="service" id="service">
+<select id="subject" name="entry.1915679418" required>
 
-    <label for="gas">Gas or Propane On Site:</label>
-    <select name="gas" id="gas">
-      <option value="">--</option>
-      <option value="yes">Yes</option>
-      <option value="no">No</option>
-    </select>
-  </div>
+<option value="">-- Select a Subject --</option>
+<option value="Inspection Request">Inspection Request</option>
+<option value="New Construction">New Construction</option>
+<option value="Generators">Generators</option>
+<option value="Other Inquiry">Other Inquiry</option>
 
-  <!-- Section: Inquiry -->
-  <div id="inquirySection" class="form-section hidden">
-    <label for="inquiry">Please describe your inquiry in detail:</label>
-    <textarea name="inquiry" id="inquiry" rows="4"></textarea>
-  </div>
+</select>
 
-  <button type="submit" class="submit-button">Submit</button>
+
+<label for="name">Your Name:</label>
+<input id="name" name="entry.2132430199" required type="text">
+
+
+<label for="address">Address:</label>
+<input id="address" name="entry.124024564" type="text">
+
+
+<label for="phone">Phone Number:</label>
+<input id="phone" name="entry.757031719" type="text">
+
+
+<label for="email">Your Email:</label>
+<input id="email" name="entry.458440677" required type="email">
+
+
+<!-- Inspection Section -->
+
+<div class="form-section hidden" id="inspectSection">
+
+<label for="issue">
+Describe your issue:
+</label>
+
+<textarea id="issue" name="entry.1992104112" rows="4"></textarea>
+
+
+<label for="aep">
+AEP Work Order #:
+</label>
+
+<input id="aep" name="entry.1402215697" type="text">
+
+</div>
+
+
+<!-- New Construction Section -->
+
+<div class="form-section hidden" id="newconSection">
+
+<label for="prints">
+Do you have blueprints?
+</label>
+
+<select id="prints" name="entry.862153166">
+
+<option value="">--</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+
+</select>
+
+
+<label for="elec">
+Is it all electric? Any gas? Please describe:
+</label>
+
+<textarea id="elec" name="entry.1721853495" rows="4"></textarea>
+
+</div>
+
+
+<!-- Generator Section -->
+
+<div class="form-section hidden" id="genSection">
+
+<label for="service">
+Service Size:
+</label>
+
+<input id="service" name="entry.1940979031" type="text">
+
+
+<label for="gas">
+Gas or Propane On Site:
+</label>
+
+<select id="gas" name="entry.342561365">
+
+<option value="">--</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+
+</select>
+
+</div>
+
+<!-- Other Inquiry Section -->
+
+<div class="form-section hidden" id="inquirySection">
+
+<label for="inquiry">
+Please describe your inquiry in detail:
+</label>
+
+<textarea id="inquiry" name="entry.1721853495" rows="4"></textarea>
+
+</div>
+
+
+<button class="submit-button" type="submit">
+Submit
+</button>
+
+
 </form>
 
+
 <script>
+
 const subjectDropdown = document.getElementById("subject");
 
 const sections = {
-    inspection: document.getElementById("inspectSection"),
-    newcon: document.getElementById("newconSection"),
-    gen: document.getElementById("genSection"),
-    inquiry: document.getElementById("inquirySection")
+  inspection: document.getElementById("inspectSection"),
+  newcon: document.getElementById("newconSection"),
+  gen: document.getElementById("genSection"),
+  inquiry: document.getElementById("inquirySection")
 };
 
-// Show/hide form sections
-subjectDropdown.addEventListener("change", function () {
 
-    Object.values(sections).forEach(section => {
-        section.classList.add("hidden");
-    });
+subjectDropdown.addEventListener("change", function(){
 
-    if (sections[this.value]) {
-        sections[this.value].classList.remove("hidden");
-    }
+  Object.values(sections).forEach(section => {
+    section.classList.add("hidden");
+  });
+
+
+  const sectionMap = {
+
+    "Inspection Request": "inspection",
+
+    "New Construction": "newcon",
+
+    "Generators": "gen",
+
+    "Other Inquiry": "inquiry"
+
+  };
+
+
+  if(sectionMap[this.value]) {
+
+    sections[sectionMap[this.value]]
+      .classList.remove("hidden");
+
+  }
+
+});
+
+
+
+document.getElementById("contactForm")
+.addEventListener("submit", function(){
+
+setTimeout(function(){
+
+window.location.href = "thankyou.html";
+
+},2500);
+
 
 });
 
 
-// Submit form
-document.getElementById("contactForm").addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    const formData = {
-
-        subject: document.getElementById("subject").value,
-
-        name: document.getElementById("name").value,
-
-        address: document.getElementById("address").value,
-
-        phone: document.getElementById("phone").value,
-
-        email: document.getElementById("email").value,
-
-        issue: document.getElementById("issue").value,
-
-        aep: document.getElementById("aep").value,
-
-        prints: document.getElementById("prints").value,
-
-        elec: document.getElementById("elec").value,
-
-        service: document.getElementById("service").value,
-
-        gas: document.getElementById("gas").value,
-
-        inquiry: document.getElementById("inquiry").value
-
-    };
-
-
-
-fetch("https://script.google.com/macros/s/AKfycbxGPSBkdbg3Q6aVO4C_6gC8LzTtRBZ1dLhVNZDK4IhEzaBe6P7ZBkzbqaxVE0lrjAOR/exec",{
-
-    method:"POST",
-
-    headers:{
-        "Content-Type":"application/json"
-    },
-
-    body:JSON.stringify(formData)
-
-})
-
-.then(response=>response.text())
-
-.then(result=>{
-
-    alert("Thank you! Your request has been submitted.");
-
-    document.getElementById("contactForm").reset();
-
-    Object.values(sections).forEach(section=>{
-        section.classList.add("hidden");
-    });
-
-})
-
-.catch(error=>{
-
-    alert("There was an error sending your request.");
-
-    console.log(error);
-
-});
-
-});
 </script>
-<br>
-	<br>
-  <div class="ft-div">
-  <footer>&copy; 2026 Long's Electrical Services. All rights reserved.</footer>
+
+
+
+<br/>
+<br/>
+
+
+<div class="ft-div">
+
+<footer>
+© 2026 Long's Electrical Services. All rights reserved.
+</footer>
+
 </div>
+
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
