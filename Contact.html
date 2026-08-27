@@ -1,351 +1,1385 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+/>
+
 <title>Contact - Long's Electrical Services</title>
 
-<link href="gallery/transitions.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet"/>
+<link
+  href="gallery/transitions.css"
+  rel="stylesheet"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap"
+  rel="stylesheet"
+/>
+
 
 <style>
+
 body {
-  background: url(contact/stairs.jpeg) no-repeat center fixed;
+
+  background:
+    url(contact/stairs.jpeg)
+    no-repeat
+    center
+    fixed;
+
   background-size: cover;
-  font-family: 'Metal Mania', cursive;
+
+  font-family:
+    'Metal Mania',
+    cursive;
+
 }
+
 
 .small {
-  font-size:20px;
+
+  font-size: 20px;
+
 }
 
-h1, h2, label {
-  color:gold;
-  text-shadow:2px 2px 5px black;
-  font-family:'Metal Mania', cursive;
+
+h1,
+h2,
+label {
+
+  color: gold;
+
+  text-shadow:
+    2px 2px 5px black;
+
+  font-family:
+    'Metal Mania',
+    cursive;
+
 }
+
 
 .bg-div {
-  background:black;
-  opacity:0.6;
-  overflow:hidden;
+
+  background: black;
+
+  opacity: 0.6;
+
+  overflow: hidden;
+
 }
+
 
 .logo-img {
-  float:left;
-  margin:1px;
+
+  float: left;
+
+  margin: 1px;
+
 }
+
 
 nav {
-  float:right;
+
+  float: right;
+
 }
+
 
 nav ul {
-  list-style:none;
-  padding:0;
-  margin:0;
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
 }
+
 
 nav li {
-  display:inline-block;
+
+  display: inline-block;
+
 }
 
+
 nav a {
-  color:gold;
-  font-family:'Metal Mania', cursive;
-  text-decoration:none;
-  padding:.5em 1em;
-  display:inline-block;
+
+  color: gold;
+
+  font-family:
+    'Metal Mania',
+    cursive;
+
+  text-decoration: none;
+
+  padding: .5em 1em;
+
+  display: inline-block;
+
 }
+
 
 nav a:hover,
 .active {
-  background-color:#52595D;
-  transform:scale(1.1);
+
+  background-color: #52595D;
+
+  transform: scale(1.1);
+
 }
+
 
 form {
-  background-color:rgba(0,0,0,.6);
-  color:gold;
-  padding:2rem;
-  max-width:600px;
-  margin:auto;
-  border-radius:10px;
-  font-family:'Metal Mania', cursive;
+
+  background-color:
+    rgba(0,0,0,.6);
+
+  color: gold;
+
+  padding: 2rem;
+
+  max-width: 600px;
+
+  margin: auto;
+
+  border-radius: 10px;
+
+  font-family:
+    'Metal Mania',
+    cursive;
+
 }
 
-input, select, textarea {
-  width:100%;
-  padding:10px;
-  margin:8px 0 16px;
-  font-family:inherit;
-  font-size:16px;
-  border-radius:5px;
-  border:1px solid #ccc;
+
+input,
+select,
+textarea {
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  margin:
+    8px 0 16px;
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  border-radius: 5px;
+
+  border:
+    1px solid #ccc;
+
 }
+
+
+textarea {
+
+  resize: vertical;
+
+}
+
 
 .submit-button {
-  background-color:gold;
-  color:black;
-  font-family:'Metal Mania', cursive;
-  font-size:18px;
-  padding:10px 30px;
-  border:none;
-  cursor:pointer;
-  clip-path:polygon(10% 0%,90% 0%,70% 40%,100% 50%,20% 100%,30% 60%,0% 50%);
-  filter:drop-shadow(2px 2px 6px rgba(0,0,0,.6));
+
+  background-color: gold;
+
+  color: black;
+
+  font-family:
+    'Metal Mania',
+    cursive;
+
+  font-size: 18px;
+
+  padding:
+    10px 30px;
+
+  border: none;
+
+  cursor: pointer;
+
+  clip-path:
+    polygon(
+      10% 0%,
+      90% 0%,
+      70% 40%,
+      100% 50%,
+      20% 100%,
+      30% 60%,
+      0% 50%
+    );
+
+  filter:
+    drop-shadow(
+      2px 2px 6px
+      rgba(0,0,0,.6)
+    );
+
 }
 
-.form-section.hidden {
-  display:none;
+
+.submit-button:disabled {
+
+  opacity: .6;
+
+  cursor: wait;
+
 }
+
+
+.form-section.hidden {
+
+  display: none;
+
+}
+
+
+/*
+  Honeypot
+
+  Positioned off-screen instead of
+  display:none because some simple
+  bots specifically ignore
+  display:none fields.
+*/
+
+.spam-trap {
+
+  position: absolute !important;
+
+  left: -10000px !important;
+
+  top: -10000px !important;
+
+  width: 1px !important;
+
+  height: 1px !important;
+
+  overflow: hidden !important;
+
+}
+
+
+.form-message {
+
+  display: none;
+
+  margin-top: 15px;
+
+  padding: 10px;
+
+  border-radius: 5px;
+
+  background:
+    rgba(0,0,0,.8);
+
+  color: gold;
+
+}
+
 
 .footer-text,
 .ft-div {
-  flex-shrink:0;
-  text-align:center;
-  padding:10px 0;
-  font-family:Metal Mania;
+
+  flex-shrink: 0;
+
+  text-align: center;
+
+  padding:
+    10px 0;
+
+  font-family:
+    Metal Mania;
+
 }
+
 
 .footer-text {
-  background:transparent;
-  text-shadow:5px 5px 8px black;
+
+  background:
+    transparent;
+
+  text-shadow:
+    5px 5px 8px black;
+
 }
+
 
 .ft-div {
-  background:black;
-  color:gold;
-  opacity:.6;
-  padding:20px;
-  text-shadow:2px 2px 5px black;
+
+  background: black;
+
+  color: gold;
+
+  opacity: .6;
+
+  padding: 20px;
+
+  text-shadow:
+    2px 2px 5px black;
+
 }
 
+
 footer {
-  text-align:center;
-  font-size:14px;
-  font-family:Metal Mania;
+
+  text-align: center;
+
+  font-size: 14px;
+
+  font-family:
+    Metal Mania;
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <div class="bg-div">
 
-<img alt="Logo" class="logo-img" src="contact/logo.png" style="width:145px;height:80px;"/>
+<img
+  alt="Logo"
+  class="logo-img"
+  src="contact/logo.png"
+  style="width:145px;height:80px;"
+/>
+
 
 <nav>
+
 <ul>
-<li><a href="/index.html">Home</a></li>
-<li><a href="/Services.html">Services</a></li>
-<li><a href="/About.html">About</a></li>
-<li><a class="active" href="#">Contact</a></li>
-<li><a href="/Gallery.html">Gallery</a></li>
+
+<li>
+<a href="/index.html">
+Home
+</a>
+</li>
+
+<li>
+<a href="/Services.html">
+Services
+</a>
+</li>
+
+<li>
+<a href="/About.html">
+About
+</a>
+</li>
+
+<li>
+<a
+  class="active"
+  href="#"
+>
+Contact
+</a>
+</li>
+
+<li>
+<a href="/Gallery.html">
+Gallery
+</a>
+</li>
+
 </ul>
+
 </nav>
 
 </div>
 
 
-<h1 style="text-align:center;margin-top:100px;">
+
+<h1
+  style="
+    text-align:center;
+    margin-top:100px;
+  "
+>
+
 Let us know how we can help!
+
 </h1>
 
-<h2 style="text-align:center;">
+
+
+<h2
+  style="
+    text-align:center;
+  "
+>
+
 Fill out the form below and we'll get back to you as soon as possible.
+
 </h2>
 
 
-<!-- Google Forms hidden submission target -->
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<!--
+  Google Forms loads its response
+  inside this invisible iframe.
+-->
+
+<iframe
+  id="hidden_iframe"
+  name="hidden_iframe"
+  style="display:none;"
+></iframe>
 
 
-<form 
-action="https://docs.google.com/forms/d/e/1FAIpQLSelnbQcXuovwEbQDtEDa7cdJg4yEuoygDtXDkhpi1sHrWW0ZQ/formResponse"
-id="contactForm"
-method="POST"
-target="hidden_iframe">
+
+<form
+
+  action="https://docs.google.com/forms/d/e/1FAIpQLSelnbQcXuovwEbQDtEDa7cdJg4yEuoygDtXDkhpi1sHrWW0ZQ/formResponse"
+
+  id="contactForm"
+
+  method="POST"
+
+  target="hidden_iframe"
+
+  autocomplete="on"
+
+>
 
 
-<!-- Honeypot -->
-<input name="_honey" style="display:none" type="text"/>
+
+<!-- ========================================= -->
+<!-- ANTI-SPAM HONEYPOT                       -->
+<!-- ========================================= -->
+
+<div
+  class="spam-trap"
+  aria-hidden="true"
+>
+
+<label for="website">
+Website
+</label>
+
+<input
+  id="website"
+  name="_honey"
+  type="text"
+  tabindex="-1"
+  autocomplete="off"
+/>
+
+</div>
 
 
-<label for="subject">Subject:</label>
 
-<select id="subject" name="entry.1915679418" required>
+<!-- ========================================= -->
+<!-- SUBJECT                                   -->
+<!-- ========================================= -->
 
-<option value="">-- Select a Subject --</option>
-<option value="Inspection Request">Inspection Request</option>
-<option value="New Construction">New Construction</option>
-<option value="Generators">Generators</option>
-<option value="Other Inquiry">Other Inquiry</option>
+<label for="subject">
+
+Subject:
+
+</label>
+
+
+<select
+  id="subject"
+  name="entry.1915679418"
+  required
+>
+
+<option value="">
+-- Select a Subject --
+</option>
+
+<option value="Inspection Request">
+Inspection Request
+</option>
+
+<option value="New Construction">
+New Construction
+</option>
+
+<option value="Generators">
+Generators
+</option>
+
+<option value="Other Inquiry">
+Other Inquiry
+</option>
 
 </select>
 
 
-<label for="name">Your Name:</label>
-<input id="name" name="entry.2132430199" required type="text">
 
+<!-- ========================================= -->
+<!-- CONTACT INFORMATION                       -->
+<!-- ========================================= -->
 
-<label for="address">Address:</label>
-<input id="address" name="entry.124024564" type="text">
+<label for="name">
 
+Your Name:
 
-<label for="phone">Phone Number:</label>
-<input id="phone" name="entry.1940979031" type="text">
-
-
-<label for="email">Your Email:</label>
-<input id="email" name="entry.1652852172" type="email">
-
-
-<!-- Inspection Section -->
-
-<div class="form-section hidden" id="inspectSection">
-
-<label for="issue">
-Describe your issue:
 </label>
 
-<textarea id="issue" name="entry.757031719" rows="4"></textarea>
+
+<input
+  id="name"
+  name="entry.2132430199"
+  type="text"
+  maxlength="100"
+  required
+/>
+
+
+
+<label for="address">
+
+Address:
+
+</label>
+
+
+<input
+  id="address"
+  name="entry.124024564"
+  type="text"
+  maxlength="200"
+/>
+
+
+
+<label for="phone">
+
+Phone Number:
+
+</label>
+
+
+<input
+  id="phone"
+  name="entry.1940979031"
+  type="tel"
+  maxlength="20"
+  inputmode="tel"
+  placeholder="304-555-1234"
+/>
+
+
+
+<label for="email">
+
+Your Email:
+
+</label>
+
+
+<input
+  id="email"
+  name="entry.1652852172"
+  type="email"
+  maxlength="150"
+  required
+/>
+
+
+
+
+<!-- ========================================= -->
+<!-- INSPECTION                                -->
+<!-- ========================================= -->
+
+<div
+  class="form-section hidden"
+  id="inspectSection"
+>
+
+
+<label for="issue">
+
+Describe your issue:
+
+</label>
+
+
+<textarea
+  id="issue"
+  name="entry.757031719"
+  rows="4"
+  maxlength="3000"
+  disabled
+></textarea>
+
 
 
 <label for="aep">
+
 AEP Work Order #:
+
 </label>
 
-<input id="aep" name="entry.458440677" type="text">
+
+<input
+  id="aep"
+  name="entry.458440677"
+  type="text"
+  maxlength="100"
+  disabled
+/>
+
 
 </div>
 
 
-<!-- New Construction Section -->
 
-<div class="form-section hidden" id="newconSection">
+
+<!-- ========================================= -->
+<!-- NEW CONSTRUCTION                          -->
+<!-- ========================================= -->
+
+<div
+  class="form-section hidden"
+  id="newconSection"
+>
+
 
 <label for="prints">
+
 Do you have blueprints?
+
 </label>
 
-<select id="prints" name="entry.862153166">
 
-<option value="">--</option>
-<option value="Yes">Yes</option>
-<option value="No">No</option>
+<select
+  id="prints"
+  name="entry.862153166"
+  disabled
+>
+
+<option value="">
+--
+</option>
+
+<option value="Yes">
+Yes
+</option>
+
+<option value="No">
+No
+</option>
 
 </select>
+
 
 
 <label for="elec">
+
 Is it all electric? Any gas? Please describe:
+
 </label>
-<textarea id="elec" name="entry.1992104112" rows="4"></textarea>
+
+
+<textarea
+  id="elec"
+  name="entry.1992104112"
+  rows="4"
+  maxlength="3000"
+  disabled
+></textarea>
+
 
 </div>
 
 
-<!-- Generator Section -->
 
-<div class="form-section hidden" id="genSection">
+
+<!-- ========================================= -->
+<!-- GENERATORS                                -->
+<!-- ========================================= -->
+
+<div
+  class="form-section hidden"
+  id="genSection"
+>
+
 
 <label for="service">
+
 Service Size:
+
 </label>
 
-<input id="service" name="entry.1402215697" type="text">
+
+<input
+  id="service"
+  name="entry.1402215697"
+  type="text"
+  maxlength="100"
+  disabled
+/>
+
 
 
 <label for="gas">
+
 Gas or Propane On Site:
+
 </label>
 
-<select id="gas" name="entry.342561365">
 
-<option value="">--</option>
-<option value="Yes">Yes</option>
-<option value="No">No</option>
+<select
+  id="gas"
+  name="entry.342561365"
+  disabled
+>
+
+<option value="">
+--
+</option>
+
+<option value="Yes">
+Yes
+</option>
+
+<option value="No">
+No
+</option>
 
 </select>
 
+
 </div>
 
-<!-- Other Inquiry Section -->
 
-<div class="form-section hidden" id="inquirySection">
+
+
+<!-- ========================================= -->
+<!-- OTHER INQUIRY                             -->
+<!-- ========================================= -->
+
+<div
+  class="form-section hidden"
+  id="inquirySection"
+>
+
 
 <label for="inquiry">
+
 Please describe your inquiry in detail:
+
 </label>
 
-<textarea id="inquiry" name="entry.1721853495" rows="4"></textarea>
+
+<textarea
+  id="inquiry"
+  name="entry.1721853495"
+  rows="4"
+  maxlength="3000"
+  disabled
+></textarea>
+
 
 </div>
 
 
-<button class="submit-button" type="submit">
+
+
+<button
+  class="submit-button"
+  id="submitButton"
+  type="submit"
+>
+
 Submit
+
 </button>
+
+
+
+<div
+  id="formMessage"
+  class="form-message"
+></div>
 
 
 </form>
 
 
+
 <script>
 
-const subjectDropdown = document.getElementById("subject");
+/* =========================================================
+   LONG'S ELECTRICAL SERVICES
+   CONTACT FORM CONTROLS + CLIENT-SIDE SPAM PROTECTION
+   ========================================================= */
+
+
+const form =
+  document.getElementById(
+    "contactForm"
+  );
+
+
+const subjectDropdown =
+  document.getElementById(
+    "subject"
+  );
+
+
+const submitButton =
+  document.getElementById(
+    "submitButton"
+  );
+
+
+const formMessage =
+  document.getElementById(
+    "formMessage"
+  );
+
+
+const hiddenIframe =
+  document.getElementById(
+    "hidden_iframe"
+  );
+
+
+/*
+  Track how long the visitor has
+  had the form open.
+*/
+
+const formLoadTime =
+  Date.now();
+
+
+let formSubmitted =
+  false;
+
+
+
+/* =========================================================
+   CONDITIONAL SECTIONS
+   ========================================================= */
+
 
 const sections = {
-  inspection: document.getElementById("inspectSection"),
-  newcon: document.getElementById("newconSection"),
-  gen: document.getElementById("genSection"),
-  inquiry: document.getElementById("inquirySection")
+
+  "Inspection Request":
+    document.getElementById(
+      "inspectSection"
+    ),
+
+  "New Construction":
+    document.getElementById(
+      "newconSection"
+    ),
+
+  "Generators":
+    document.getElementById(
+      "genSection"
+    ),
+
+  "Other Inquiry":
+    document.getElementById(
+      "inquirySection"
+    )
+
 };
 
 
-subjectDropdown.addEventListener("change", function(){
 
-  Object.values(sections).forEach(section => {
-    section.classList.add("hidden");
-  });
+function disableSection(section) {
 
-
-  const sectionMap = {
-
-    "Inspection Request": "inspection",
-
-    "New Construction": "newcon",
-
-    "Generators": "gen",
-
-    "Other Inquiry": "inquiry"
-
-  };
+  section.classList.add(
+    "hidden"
+  );
 
 
-  if(sectionMap[this.value]) {
+  const controls =
+    section.querySelectorAll(
+      "input, select, textarea"
+    );
 
-    sections[sectionMap[this.value]]
-      .classList.remove("hidden");
+
+  controls.forEach(
+    function(control) {
+
+      control.disabled = true;
+
+    }
+  );
+
+}
+
+
+
+function enableSection(section) {
+
+  section.classList.remove(
+    "hidden"
+  );
+
+
+  const controls =
+    section.querySelectorAll(
+      "input, select, textarea"
+    );
+
+
+  controls.forEach(
+    function(control) {
+
+      control.disabled = false;
+
+    }
+  );
+
+}
+
+
+
+function updateSections() {
+
+  Object.values(
+    sections
+  ).forEach(
+    disableSection
+  );
+
+
+  const selected =
+    sections[
+      subjectDropdown.value
+    ];
+
+
+  if (selected) {
+
+    enableSection(
+      selected
+    );
 
   }
 
-});
+}
 
 
 
-document.getElementById("contactForm")
-.addEventListener("submit", function(){
-
-setTimeout(function(){
-
-window.location.href = "thankyou.html";
-
-},2500);
+subjectDropdown.addEventListener(
+  "change",
+  updateSections
+);
 
 
-});
+
+/*
+  Ensure everything starts in
+  the correct disabled state.
+*/
+
+updateSections();
+
+
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+
+
+function showMessage(message) {
+
+  formMessage.textContent =
+    message;
+
+  formMessage.style.display =
+    "block";
+
+}
+
+
+
+function clearMessage() {
+
+  formMessage.textContent =
+    "";
+
+  formMessage.style.display =
+    "none";
+
+}
+
+
+
+function validUSPhone(phone) {
+
+  if (
+    phone.trim() === ""
+  ) {
+
+    return true;
+
+  }
+
+
+  const digits =
+    phone.replace(
+      /\D/g,
+      ""
+    );
+
+
+  if (
+    digits.length === 10
+  ) {
+
+    return true;
+
+  }
+
+
+  if (
+    digits.length === 11 &&
+    digits.startsWith("1")
+  ) {
+
+    return true;
+
+  }
+
+
+  return false;
+
+}
+
+
+
+function suspiciousRepeatedText() {
+
+  const selectedSubject =
+    subjectDropdown.value;
+
+
+  let fields = [];
+
+
+  if (
+    selectedSubject ===
+    "Inspection Request"
+  ) {
+
+    fields = [
+      document
+        .getElementById("issue")
+        .value
+    ];
+
+  }
+
+
+  else if (
+    selectedSubject ===
+    "New Construction"
+  ) {
+
+    fields = [
+      document
+        .getElementById("elec")
+        .value
+    ];
+
+  }
+
+
+  else if (
+    selectedSubject ===
+    "Other Inquiry"
+  ) {
+
+    fields = [
+      document
+        .getElementById("inquiry")
+        .value
+    ];
+
+  }
+
+
+  /*
+    Currently each branch only has
+    one long-description field, so
+    legitimate customers won't get
+    accidentally blocked.
+
+    The Apps Script remains the
+    server-side spam filter.
+  */
+
+  return false;
+
+}
+
+
+
+/* =========================================================
+   FORM SUBMISSION
+   ========================================================= */
+
+
+form.addEventListener(
+  "submit",
+  function(event) {
+
+
+    clearMessage();
+
+
+
+    /* -----------------------------------------
+       HONEYPOT
+       ----------------------------------------- */
+
+    const honeypot =
+      document
+        .getElementById(
+          "website"
+        )
+        .value
+        .trim();
+
+
+    if (
+      honeypot !== ""
+    ) {
+
+      event.preventDefault();
+
+      /*
+        Don't tell the bot exactly
+        why it was rejected.
+      */
+
+      showMessage(
+        "Unable to submit the form. Please try again."
+      );
+
+      return false;
+
+    }
+
+
+
+    /* -----------------------------------------
+       MINIMUM COMPLETION TIME
+       ----------------------------------------- */
+
+    const elapsed =
+      Date.now() -
+      formLoadTime;
+
+
+    if (
+      elapsed < 4000
+    ) {
+
+      event.preventDefault();
+
+      showMessage(
+        "Please wait a few seconds before submitting the form."
+      );
+
+      return false;
+
+    }
+
+
+
+    /* -----------------------------------------
+       NAME
+       ----------------------------------------- */
+
+    const name =
+      document
+        .getElementById(
+          "name"
+        )
+        .value
+        .trim();
+
+
+    if (
+      name.length < 2
+    ) {
+
+      event.preventDefault();
+
+      showMessage(
+        "Please enter your name."
+      );
+
+      return false;
+
+    }
+
+
+
+    /* -----------------------------------------
+       PHONE
+       ----------------------------------------- */
+
+    const phone =
+      document
+        .getElementById(
+          "phone"
+        )
+        .value;
+
+
+    if (
+      !validUSPhone(phone)
+    ) {
+
+      event.preventDefault();
+
+      showMessage(
+        "Please enter a valid 10-digit phone number."
+      );
+
+      return false;
+
+    }
+
+
+
+    /* -----------------------------------------
+       EMAIL
+       ----------------------------------------- */
+
+    const email =
+      document
+        .getElementById(
+          "email"
+        );
+
+
+    if (
+      !email.checkValidity()
+    ) {
+
+      event.preventDefault();
+
+      showMessage(
+        "Please enter a valid email address."
+      );
+
+      return false;
+
+    }
+
+
+
+    /* -----------------------------------------
+       SUBJECT
+       ----------------------------------------- */
+
+    if (
+      subjectDropdown.value === ""
+    ) {
+
+      event.preventDefault();
+
+      showMessage(
+        "Please select a subject."
+      );
+
+      return false;
+
+    }
+
+
+
+    /* -----------------------------------------
+       FINAL SUBMISSION
+       ----------------------------------------- */
+
+    formSubmitted =
+      true;
+
+
+    submitButton.disabled =
+      true;
+
+
+    submitButton.textContent =
+      "Sending...";
+
+
+    /*
+      At this point we allow the
+      browser to POST normally to
+      Google Forms.
+    */
+
+  }
+);
+
+
+
+/* =========================================================
+   GOOGLE RESPONSE COMPLETE
+   ========================================================= */
+
+
+/*
+  When Google finishes loading its
+  response into the hidden iframe,
+  send the visitor to thankyou.html.
+
+  The formSubmitted flag prevents
+  the iframe's initial load from
+  causing a redirect.
+*/
+
+
+hiddenIframe.addEventListener(
+  "load",
+  function() {
+
+    if (
+      formSubmitted
+    ) {
+
+      setTimeout(
+        function() {
+
+          window.location.href =
+            "thankyou.html";
+
+        },
+
+        350
+
+      );
+
+    }
+
+  }
+);
 
 
 </script>
@@ -356,14 +1390,19 @@ window.location.href = "thankyou.html";
 <br/>
 
 
+
 <div class="ft-div">
 
 <footer>
-© 2026 Long's Electrical Services. All rights reserved.
+
+© 2026 Long's Electrical Services.
+All rights reserved.
+
 </footer>
 
 </div>
 
 
 </body>
+
 </html>
